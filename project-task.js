@@ -44,30 +44,30 @@ but it contains multiple syntax errors that prevent it from being parsed.
 // 🔍 Provided JSON File with Errors
 // ============================================
 
-const invalidBookingJSON = `
-{
+const invalidBookingJSON = 
+{ 
   "hotelName": "Grand City Hotel",
-  "checkInDate": "2024-05-15"
+  "checkInDate": "2024-05-15", 
   "checkOutDate": "2024-05-20",
   "guests": [
     {
-      name: "Alice Johnson",
+      "name": "Alice Johnson",
       "age": 30,
       "email": "alice.johnson@example.com"
     },
     {
       "name": "Bob Smith",
-      "age": undefined,
+      "age": null, 
       "email": "bob.smith@example"
     }
   ],
   "roomDetails": {
     "type": "Suite",
     "pricePerNight": 200,
-    "amenities": ["WiFi", "Breakfast", "Parking",]
+    "amenities": ["WiFi", "Breakfast", "Parking"] 
   }
 }
-`;
+;
 
 
 // ============================================
@@ -83,6 +83,16 @@ const invalidBookingJSON = `
 */
 
 
+
+//missing comma after date, needs a comma just like a sentence. Added a comma
+//missing "" around name, needs "" around any string. Added ""
+// should be null not undefined, undefined would cause age not to print. replaced with null.
+// extra comma after parking. Do not need a comma at the end of the array. Deleted comma
+
+
+
+
+
 // ============================================
 // 🤔 Follow-Up Questions
 // ============================================
@@ -91,11 +101,12 @@ const invalidBookingJSON = `
 💬 Reflect and answer the following:
 
 1️⃣ What tools or techniques did you use to identify the errors?
-
+I used my prior knowledge of JSON syntax and a linting website. 
 2️⃣ How did you confirm that your corrected JSON file was valid?
-
+I checked the corrected file with a linting website. 
 3️⃣ Which errors were the most difficult to spot? Why?
-
+The hardest one was the undefined line. I forgot that it needed to be null at first, then I remembered.
 4️⃣ What strategies can help you avoid these kinds of errors in the future?
    (e.g., syntax highlighting, linters, writing JSON by example)
+I will keep using the linting website because it is super useful.
 */
